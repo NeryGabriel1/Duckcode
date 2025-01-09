@@ -1,0 +1,927 @@
+/*El Body,Header y el Footer iran en todas las paginas.*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; 
+    color: #333; 
+}
+
+/* Encabezado */
+header {
+    background-color: #333; 
+    color: #f5f5f5; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #fdb827; 
+}
+/* Menú hamburguesa en dispositivos pequeños */
+.hamburger {
+    display: none; 
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;  
+    }
+
+    header nav ul {
+        display: none; 
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    header nav ul.show {
+        display: flex; 
+    }
+
+    header nav ul li {
+        margin: 10px 0; 
+        text-align: center;
+    }
+}
+ /**********************************/
+  
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #333; 
+    color: #f5f5f5; 
+    margin-top: 20px;
+}
+
+footer a {
+    color: #fdb827; 
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+/*******************************************************************************************/
+/*Esto es parte de sobre nosotros donde muestra el video */
+/* Responsividad para el video */
+ .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Ajustes generales */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/***********************************************************/
+/*Esta parte es de DuckCode*/
+ /* Estilo de botones llamativos */
+ .cta-button {
+    display: inline-block;
+    background-color: #fdb827;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+/*Esto es el principio del main*/
+.principio {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #333, #ffffff);
+    color: #333;
+    margin-bottom: 30px;
+}
+.principio img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.principio h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.principio p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+/*Esto es la parte de las Secciones */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #333; 
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fdb827; 
+    display: inline-block;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    color: #555; 
+}
+/*Esto es la parte de las cajitas de información*/
+.info-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.info-box {
+    background: linear-gradient(135deg, #ffecb3, #ffe082);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.info-box h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-box ul li {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.info-box .extra-info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 193, 7, 0.9);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    transition: top 0.3s ease-in-out;
+}
+
+.info-box:hover .extra-info {
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Esta parte es de estilos para la sección de motivación */
+/* Estilos para la sección de Motivación */
+#motivacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #858484, #ffffff); /* Degradado de negro a blanco desde arriba hacia abajo */
+  color: #ffffff; /* Texto en blanco */
+}
+
+#motivacion .contenedor {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap; /* Ajuste para pantallas pequeñas */
+}
+
+#motivacion .texto {
+  flex: 1; /* Espacio para el texto */
+  padding: 20px;
+  text-align: left;
+}
+
+#motivacion .texto h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000; /* Título en negro */
+}
+
+#motivacion .texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333; /* Texto en gris oscuro */
+}
+
+#motivacion .Mascota {
+  flex: 1; /* Espacio para la imagen */
+  text-align: center;
+  padding: 20px;
+}
+
+#motivacion .Mascota img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  animation: movimiento 3s infinite ease-in-out; /* Animación de movimiento */
+}
+
+/* Animación para la imagen */
+@keyframes movimiento {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+  #motivacion .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #motivacion .texto {
+    text-align: center;
+  }
+}
+
+  
+/* Esta es la parte de estilos para la sección  programador-3d*/
+/* Estilos para la sección de Programador 3D */
+#programador-3d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #bdbcbc, #ffffff); /* Degradado verde a azul */
+  color: #2f2e2e; /* Texto en blanco */
+}
+
+#programador-3d .card {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap; /* Ajuste para pantallas pequeñas */
+}
+
+#programador-3d .imagen {
+  flex: 1; /* Espacio para la imagen */
+  text-align: center;
+  padding: 20px;
+}
+
+#programador-3d .imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  animation: movimiento 3s infinite ease-in-out; /* Animación de movimiento */
+}
+
+@keyframes movimiento {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#programador-3d .texto {
+  flex: 1; /* Espacio para el texto */
+  padding: 20px;
+  text-align: left;
+}
+
+#programador-3d .texto h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#programador-3d .texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 768px) {
+  #programador-3d .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #programador-3d .texto {
+    text-align: center;
+  }
+}
+  /**********************************************/
+  /* Estilo para el contenedor principal */
+.contenido {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+  background: linear-gradient(to bottom, #000000, #ffffff); /* Degradado negro a blanco */
+  text-align: center;
+  overflow: hidden; /* Oculta elementos flotantes fuera del área */
+  padding: 20px;
+  color: #ffffff; /* Texto en blanco */
+}
+
+/* Título */
+.contenido h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Párrafo */
+.contenido p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+/* Botones */
+.contenido .botones {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contenido .boton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Botón App Store */
+.contenido .boton.app-store {
+  background: #007aff;
+  color: #ffffff;
+}
+
+.contenido .boton.app-store:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Botón Google Play */
+.contenido .boton.google-play {
+  background: #34a853;
+  color: #ffffff;
+}
+
+.contenido .boton.google-play:hover {
+  background: #2c8c43;
+  transform: scale(1.05);
+}
+
+/* Íconos dentro de los botones */
+.contenido .boton img {
+  width: 24px;
+  height: 24px;
+}
+
+
+  /* Animaciones flotantes */
+  .animaciones {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+  
+  .floating-object {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    animation: float 6s infinite ease-in-out;
+  }
+  
+  /* Elementos flotantes */
+  .laptop {
+    background-image: url('https://img.icons8.com/plasticine/100/000000/laptop.png');
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+  }
+  
+  .code-screen {
+    background-image: url('https://img.icons8.com/plasticine/100/000000/code.png');
+    bottom: 10%;
+    right: 20%;
+    animation-delay: 1s;
+  }
+  
+  .keyboard {
+    background-image: url('https://img.icons8.com/plasticine/100/000000/keyboard.png');
+    bottom: 25%;
+    left: 5%;
+    animation-delay: 3s;
+  }
+  
+  .mouse {
+    background-image: url('https://img.icons8.com/plasticine/100/000000/mouse.png');
+    top: 20%;
+    right: 10%;
+    animation-delay: 4s;
+  }
+  
+  .monitor {
+    background-image: url('https://img.icons8.com/plasticine/100/000000/monitor.png');
+    bottom: 15%;
+    right: 50%;
+    animation-delay: 5s;
+  }
+  
+  .coding-book {
+    background-image: url('https://img.icons8.com/plasticine/100/000000/book.png');
+    top: 35%;
+    left: 70%;
+    animation-delay: 6s;
+  }
+  /* Animación flotante */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  /****************************************************************/
+  /*Esta es la parte del Home*/
+ /* Sección Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 50%;
+  text-align: left;
+  flex: 1 1 300px;
+}
+
+.hero-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  flex: 1 1 300px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background: #ff9800;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e68900;
+}
+
+/* Sección de Cursos */
+.cursos {
+  padding: 40px;
+  text-align: center;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Estilo para las Tarjetas */
+.course-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* 🎯 Efecto Hover (Levitación y Escala) */
+.course-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Imagen Animada */
+.course-card img {
+  max-width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Barra de Progreso */
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  color: white;
+  background: #4caf50;
+  transition: width 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  header {
+    /* flex-direction: column;*/
+      text-align: center;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      padding: 10px 0;
+  }
+
+  header nav ul li {
+      margin: 10px 0;
+  }
+
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-text {
+      max-width: 100%;
+      text-align: center;
+  }
+
+  .hero-image img {
+      max-width: 100%;
+  }
+
+  .course-grid {
+      grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+
+  .course-card {
+      height: auto;
+  }
+}
+
+/* Dispositivos medianos (tablets) */
+@media (max-width: 1024px) {
+  .course-grid {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+}
+
+/* Dispositivos grandes (PCs) */
+@media (min-width: 1025px) {
+  .course-grid {
+      grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  }
+}
+/************************************************************/
+/*Esta es la parte de Formulario*/
+.container-form {
+    display: flex;
+            justify-content: center;
+            margin: 50px auto; 
+            border-radius: 20px;
+            box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
+            height: 500px;
+            max-width: 900px;
+            transition: all 1s ease;
+        }
+          
+        .information {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background-color: #c7eef3;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+          
+        .info-childs {
+            width: 100%;
+            padding: 0 30px;
+        }
+          
+        .form-information {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            text-align: center;
+            background-color: #f8f8f8;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .hide {
+         display: none;
+        }
+        
+        .show {
+            display: flex;
+        }
+          
+        @media screen and (max-width: 580px) {
+            .container-form {
+                flex-direction: column;
+                height: auto;
+            }
+            .information, .form-information {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+/***************************************************************/
+/*Esta es la parte de Conctato*/
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+main {    
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 20px;
+}
+/**/
+/* Sección de Valores */
+.valores {
+  padding: 40px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.valores-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.valor {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.valor:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.valor img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Sección Testimonios */
+.testimonios {
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonio-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  background: white;
+}
+
+/* Sección Equipo */
+.estudiante {
+  padding: 40px;
+  text-align: center;
+}
+
+.estudiante-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.alumnos {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.alumnos img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.alumnos:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}

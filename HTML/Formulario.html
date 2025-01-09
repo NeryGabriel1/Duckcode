@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - DuckCode</title>
+    <link rel="stylesheet" href="../css/DuckCode.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo.png" alt="DuckCode Logo">
+            <h1>DuckCode</h1>
+        </div>
+        <button class="hamburger" aria-label="Abrir menú"> ☰ </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="DuckCode.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="SobreNosotros.html">Sobre Nosotros</a></li>
+                <li><a href="características.html">Características</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FORMULARIO DE REGISTRO -->
+    <div class="container-form register show" id="registerForm">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>¿Ya tienes una cuenta? <br>
+                    Inicia sesión aquí.</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+                <br>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-github'></i>
+                    <i class='bx bxl-linkedin'></i>
+                </div>
+                <br>
+                <form class="form form-register">
+                    <label>
+                        <i class='bx bx-user'></i>
+                        <input type="text" placeholder="Nombre Usuario" name="userName" required>
+                    </label>
+                    <br><br>
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo Electrónico" name="userEmail" required>
+                    </label>
+                    <br><br>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" name="userPassword" required>
+                    </label>
+                    <br><br>
+                    <input type="submit" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULARIO DE LOGIN -->
+    <div class="container-form login hide" id="loginForm">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡Hola de nuevo!</h2>
+                <p>¿No tienes una cuenta? <br>
+                    Regístrate aquí.</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <br>
+                <form class="form form-login">
+                    <label>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo Electrónico" name="userEmail" required>
+                    </label>
+                    <br><br>
+                    <label>
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" name="userPassword" required>
+                    </label>
+                    <br><br>
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 DuckCode. Todos los derechos reservados.</p>
+        <p>Síguenos en: 
+            <a href="#">Twitter</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="../java/LoginandRegester.js"></script>
+    <script src="../java/Hamburguesa.js"></script>
+</body>
+</html>
